@@ -16,7 +16,9 @@ export default [
       nodeResolve({
         extensions: ['.js', '.ts', '.tsx'],
       }),
-      commonjs(),
+      commonjs(
+        
+      ),
       babel({
         babelHelpers: 'runtime',
         exclude: '**/node_modules/**',
