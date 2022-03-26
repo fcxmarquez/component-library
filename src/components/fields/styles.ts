@@ -5,7 +5,7 @@ import {
   SECONDARY_TEXT_COLOR,
   PRIMARY_COLOR,
   DISABLED_OPACITY,
-} from '../utils/styles';
+} from '../../utils/styles';
 import { TextAreaProps } from './TextArea';
 
 export const LabelWrapper = styled.label`
