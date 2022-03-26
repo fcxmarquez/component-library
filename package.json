@@ -19,7 +19,8 @@
     "lint:format": "prettier --check \"src/**/*\"",
     "lint:js": "eslint src/**",
     "lint": "npm run lint:format && npm run lint:js",
-    "chromatic": "npx chromatic --project-token=1ce6b043b30a"
+    "chromatic": "npx chromatic --project-token=1ce6b043b30a",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -58,6 +59,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.7",
     "prettier": "^2.5.1",
     "rollup": "^2.69.0",
