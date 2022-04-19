@@ -1,25 +1,27 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import { prettyDOM } from '@testing-library/react';
 import { Button } from './Button';
 
 describe('Button', () => {
   it('applies default type of button', () => {
-    render(<Button>Hello</Button>);
+    const component = render(<Button>Hello</Button>);
 
-    expect(screen.getByRole('button')).toHaveAttribute('type', 'button');
+    screen.getByText('Hello');
+
+    console.log(prettyDOM(component.container));
   });
 
-  it('applies specific type if provided', () => {
-    render(<Button type="submit">Hello</Button>);
+  it('clicking the button calls event handler once', () => {
+    const mockHandler = jest.fn();
 
-    expect(screen.getByRole('button')).toHaveAttribute('type', 'submit');
-  });
+    const component = render(<Button onClick={mockHandler}>Hello</Button>);
 
-  it('applies valid attribute to element', () => {
-    /* This is for check if the element accept a button type atribute  */
-    render(<Button aria-label="test">Hello</Button>);
+    const button = component.getByText('Hello');
 
-    expect(screen.getByRole('button')).toHaveAttribute('aria-label', 'test');
+    fireEvent.click(button);
+
+    expect(mockHandler).toHaveBeenCalledTimes(1);
   });
 });
