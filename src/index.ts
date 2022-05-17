@@ -1,2 +1,2 @@
-export { Button } from './components/buttons/Button';
-export { Field } from './components/fields/Field';
+export { Button } from './components/General/Buttons/Button/Button';
+export { Field } from './components/Forms/Fields/CompoundField/Field';

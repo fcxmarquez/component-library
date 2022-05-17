@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledButton } from './styles';
+import { StyledButton } from './Button.styles';
 import PropTypes from 'prop-types';
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {

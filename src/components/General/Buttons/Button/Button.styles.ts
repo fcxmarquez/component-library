@@ -8,7 +8,7 @@ import {
   PRIMARY_TEXT_COLOR,
   DANGER_TEXT_COLOR,
   DANGER_COLOR,
-} from '../../utils/styles';
+} from '../../../utils/styles';
 import { transparentize } from 'polished';
 
 const colorStyles = (p: ButtonProps) => {
